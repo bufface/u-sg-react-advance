@@ -3,6 +3,10 @@ import { connect } from 'react-redux';
 
 export default function (ComposeComponent) {
   class Authentication extends Component {
+    static contexTypes = {
+      router: React.PropTypes.object
+    };
+
     render() {
       return <ComposeComponent { ...this.props } />;
     }
