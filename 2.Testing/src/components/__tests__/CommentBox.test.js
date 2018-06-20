@@ -22,4 +22,5 @@ it('has a textarea that users can type in', () => {
   expect(wrapped.find('textarea')).simulate('change', {
     target: { value: 'new comment' }
   });
+  wrapped.update();
 });
