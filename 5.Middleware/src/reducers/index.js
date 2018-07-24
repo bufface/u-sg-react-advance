@@ -1,8 +1,6 @@
 import { combineReducers } from 'redux';
-import usersReducer from './users';
+import commentsReducer from 'reducers/comments';
 
-const rootReducer = combineReducers({
-  users: usersReducer
+export default combineReducers({
+  comments: commentsReducer
 });
-
-export default rootReducer;

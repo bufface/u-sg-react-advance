@@ -1,1 +1,2 @@
-export const FETCH_USERS = 'fetch_users';
+export const SAVE_COMMENT = 'save_comment';
+export const FETCH_COMMENTS = 'fetch_comments';

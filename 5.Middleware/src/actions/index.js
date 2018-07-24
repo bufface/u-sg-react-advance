@@ -1,13 +1,19 @@
 import axios from 'axios';
-import  {
-  FETCH_USERS
-} from './types';
+import { SAVE_COMMENT } from 'actions/types';
+import { FETCH_COMMENTS } from './types';
 
-export function fetchUsers() {
-  const request = axios.get('https://jsonplaceholder.typicode.com/users');
+export function saveComment(comment) {
+  return {
+    type: SAVE_COMMENT,
+    payload: comment
+  };
+}
+
+export function fetchComments() {
+  const response = axios.get('http://jsonplaceholder.typicode.com/comments');
 
   return {
-    type: FETCH_USERS,
-    payload: request
+    type: FETCH_COMMENTS,
+    payload: response
   };
 }
